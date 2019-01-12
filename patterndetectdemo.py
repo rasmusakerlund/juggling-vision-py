@@ -10,11 +10,11 @@ from frameratechecker import FramerateChecker
 handleTensorflowSession(memoryLimit=0.2)
 
 gridModel = GridModel("../grid_models/grid_model_submovavg_64x64.h5")
-patternModel = load_model("3b30_demo_pattern_model.h5")
+patternModel = load_model("../pattern_models/3b_pattern_model.h5")
 cap = cv2.VideoCapture(0)
 history = []
 framerateChecker = FramerateChecker(expected_fps=30)
-names = ["441", "box", "cascade", "42, left hand", "shower, left hand", "mill's mess", "one up two up", "42, right hand", "reverse cascade", "shower, right hand", "takeouts", "tennis",""]
+names = ["441", "box", "cascade", "42, left hand", "shower, left hand", "mill's mess", "one up two up", "42, right hand", "reverse cascade", "shower, right hand", "takeouts", "tennis"]
 while(True):
     framerateChecker.check()
     ret, original_img = cap.read()
@@ -31,7 +31,7 @@ while(True):
         coordinates.extend(ballsAndHands["lhand"])
         coordinates.extend(ballsAndHands["balls"].flatten())
         history.append(coordinates)
-        if len(history) > 60:
+        if len(history) > 30:
             del history[0]
         else:
             continue

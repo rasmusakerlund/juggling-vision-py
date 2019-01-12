@@ -5,8 +5,8 @@ import scikitplot as skplt
 import numpy as np
 import cv2
 
-pdl = PatternDataLoader("3balls_demo", length=60)
-saveModelFilename="3b30_demo_pattern_model.h5"
+pdl = PatternDataLoader("3balls", length=30)
+saveModelFilename="3b_pattern_model.h5"
 
 
 
@@ -29,11 +29,11 @@ model.add(Dense(units=60, kernel_regularizer=regularizers.l2(0.0001)))
 model.add(LeakyReLU())
 
 
-model.add(Dense(units=13, activation='softmax'))
+model.add(Dense(units=12, activation='softmax'))
 
 model.compile(loss='categorical_crossentropy', optimizer='adadelta', metrics=[metrics.categorical_accuracy])
 checkpoint = ModelCheckpoint(saveModelFilename, verbose=1, save_best_only=True, period=1)
-model.fit(x=pdl.trainx,y=pdl.trainy, batch_size=32, validation_data=(pdl.valx, pdl.valy), epochs=50, callbacks=[checkpoint])
+model.fit(x=pdl.trainx,y=pdl.trainy, batch_size=32, validation_data=(pdl.valx, pdl.valy), epochs=10, callbacks=[checkpoint])
 # batch_size = 32, epochs = 50
 
 
