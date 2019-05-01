@@ -2,6 +2,10 @@
 
 The project provides real-time localization of balls and hands in real-time video as well as live categorization of some common juggling patterns. The code was written as part of my thesis project. If you want to understand the code you might want to have a look at the implementation chapter: http://www.diva-portal.org/smash/record.jsf?pid=diva2:1297966
 
+## Demo Video
+
+To see a video of the code in action visit: https://www.youtube.com/watch?v=nsTGB06gu40
+
 ## Getting Started (tested on Ubuntu 16.04)
 If you have a CUDA-capable GPU from NVIDIA and you want to use it you first have to follow the instructions on https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html to install CUDA.
 
