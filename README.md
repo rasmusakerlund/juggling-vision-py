@@ -1,6 +1,6 @@
 # Juggling Vision python version
 
-The project provides real-time localization of balls and hands in real-time video as well as live categorization of some common juggling patterns. The code was written as part of my thesis project. If you want to understand the code you might want to have a look at the implementation chapter: http://www.diva-portal.org/smash/record.jsf?pid=diva2:1297966
+The project provides real-time localization of balls and hands in video as well as live categorization of some common juggling patterns. The code was written as part of my thesis project. If you want to understand the code you might want to have a look at the implementation chapter: http://www.diva-portal.org/smash/record.jsf?pid=diva2:1297966
 
 ## Demo Video
 
